@@ -1,8 +1,8 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { increment } from '../app-state/features/userPreferenceSlice';
+import { increment } from '../../app-state/features/userPreferenceSlice';
 
-const Home = () => {
+const HomePage = () => {
     const counter = useSelector(
         state=> state.userPreference.count
     )
@@ -16,4 +16,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default HomePage
