@@ -6,6 +6,7 @@ import ProfilePage from 'pages/profilePage';
 import { useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import { themeSettings } from 'theme';
+import Navbar from 'pages/navbar';
 
 function App() {
   const mode = useSelector((state) => state.mode);
