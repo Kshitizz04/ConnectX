@@ -6,7 +6,6 @@ import ProfilePage from 'pages/profilePage';
 import { useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import { themeSettings } from 'theme';
-import Navbar from 'pages/navbar';
 
 function App() {
   const mode = useSelector((state) => state.mode);
@@ -19,8 +18,8 @@ function App() {
         <CssBaseline/>
         <Routes>
           <Route path='/' element={<LoginPage/>} />
-          <Route path='/home' element={<HomePage/>} />
-          <Route path='/profile/:userID' element={<ProfilePage/>} />
+          <Route path='/home' element={isAuth ? <HomePage/> : <Navigate to={"/"}/>} />
+          <Route path='/profile/:userID' element={isAuth ? <ProfilePage/> : <Navigate to={"/"}/>} />
         </Routes>
       </ThemeProvider>
     </Box>
