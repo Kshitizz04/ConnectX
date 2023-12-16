@@ -116,8 +116,8 @@ export const posts = [
 	{
 		_id: new mongoose.Types.ObjectId(),
 		userId: userIds[1],
-		firstName: "Yash",
-		lastName: "Korla",
+		firstName: "Kshitiz",
+		lastName: "Sharma",
 		location: "New York, CA",
 		description: "Enjoying",
 		picturePath: "post1.jpeg",
