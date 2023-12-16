@@ -1,18 +1,14 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { increment } from '../../app-state/features/userPreferenceSlice';
+import { Box } from '@mui/material';
+import Navbar from 'pages/navbar';
 
 const HomePage = () => {
-    const counter = useSelector(
-        state=> state.userPreference.count
-    )
-    const dispatch = useDispatch();
 
   return (
-    <>
-        <div>{counter}</div>
-        <button onClick={()=>{dispatch(increment())}}> click me</button>
-    </>
+    <Box>
+      <Navbar/>
+    </Box>
   )
 }
 
